@@ -6,4 +6,4 @@ You can check out the generated documentation on Apiary:
 [http://docs.delijnapi.apiary.io](http://docs.delijnapi.apiary.io)
 
 ## Source
-To view the complete source make sure to view the API.md file as "raw".
+To view the complete source make sure to view the apiary.apib file as "raw".
