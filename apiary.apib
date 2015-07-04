@@ -1,11 +1,11 @@
 FORMAT: 1A
-HOST: https://www.delijn.be/rise-api-web/
+HOST: https://www.delijn.be/
 
 # De Lijn — Rise API
 De Lijn Rise Web API, bekijk ook zeker eens de bijhorende blog post:
 http://demey.io/reverse-engineering-belgium-de-lijn/
 
-## Routeplanner [/reisadvies/routes/{startPoint}/{endPoint}/{startX}/{startY}/{endX}/{endY}/{date}/{time}/{arrivalDeparture}/{byBus}/{byTram}/{byMetro}/{byTrain}/{byBelbus}/{language}]
+## Routeplanner [/rise-api-core/reisadvies/routes/{startPoint}/{endPoint}/{startX}/{startY}/{endX}/{endY}/{date}/{time}/{arrivalDeparture}/{byBus}/{byTram}/{byMetro}/{byTrain}/{byBelbus}/{language}]
 
 Een beetje uitleg bij de verschillende parameters:
 
@@ -51,8 +51,8 @@ Een beetje uitleg bij de verschillende parameters:
     + startY     (required, number, `206073`) ... Y coordinaat van het beginpunt.
     + endX       (required, number, `133774`) ... X coordinaat van het eindpunt.
     + endY       (required, number, `200500`) ... Y coordinaat van het eindpunt.
-    + date       (required, string, `09-05-2015`) ... Datum van het vertrek/aankomen.
-    + time       (required, string, `14:00`) ... Tijd van het vertrek/aankomen.
+    + date       (required, string, `04-07-2015`) ... Datum van het vertrek/aankomen.
+    + time       (required, string, `20:00`) ... Tijd van het vertrek/aankomen.
     + arrivalDeparture (required, number, `1`) ... Vertrekken of aankomen modus.
     + byBus      (required, string, `on`) ... Zoek ook naar bus routes.
     + byTram     (required, string, `on`) ... Zoek ook naar tram routes.
