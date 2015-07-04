@@ -190,7 +190,16 @@ Ophalen van haltes data
 
 # Group Zoeken
 
-## Quick Search [/search/quicksearch/{query}]
+## Search [/rise-api-search/search/search/{query}/{publication_id}]
+
+### GET
++ Parameters
+    + query (required, string, `Gent`) ... Zoek query
+    + publication_id (required, number, `3`) ... Onbekend, injected in pagina
+
++ Response 200 (application/json)
+
+## Quick Search [/rise-api-search/search/quicksearch/{query}]
 
 ### GET
 + Parameters
@@ -198,7 +207,7 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Gemeenten [/search/quicksearch/gemeenten/{query}]
+## Gemeenten [/rise-api-search/search/quicksearch/gemeenten/{query}]
 
 ### GET
 + Parameters
@@ -206,7 +215,15 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Haltes [/locations/locatiezoeker/{num_results}/{query}]
+## Haltes [/rise-api-search/search/haltes/{query}/1]
+
+### GET
++ Parameters
+    + query (required, string, `gent-sint-pieters`) ... Zoek query
+
++ Response 200 (application/json)
+
+## Locaties [/rise-api-search/locations/locatiezoeker/{num_results}/{query}]
 
 ### GET
 + Parameters
@@ -215,7 +232,16 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Nieuws [/search/nieuwsoverzicht/{category_id}/{language_id}/{page}]
+## Infopagina's [/rise-api-search/search/infopaginas/{query}/1/{publication_id}]
+
+### GET
++ Parameters
+    + query (required, string, `brussel`) ... Zoek query
+    + publication_id (required, number, `3`) ... Onbekend, injected in pagina
+
++ Response 200 (application/json)
+
+## Nieuws [/rise-api-search/search/nieuwsoverzicht/{category_id}/{language_id}/{page}]
 
 ### GET
 + Parameters
