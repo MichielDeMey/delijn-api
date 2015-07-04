@@ -5,6 +5,7 @@ HOST: https://www.delijn.be/
 De Lijn Rise Web API, bekijk ook zeker eens de bijhorende blog post:
 http://demey.io/reverse-engineering-belgium-de-lijn/
 
+# Group Routeplanner
 ## Routeplanner [/rise-api-core/reisadvies/routes/{startPoint}/{endPoint}/{startX}/{startY}/{endX}/{endY}/{date}/{time}/{arrivalDeparture}/{byBus}/{byTram}/{byMetro}/{byTrain}/{byBelbus}/{language}]
 
 Een beetje uitleg bij de verschillende parameters:
@@ -66,7 +67,7 @@ Een beetje uitleg bij de verschillende parameters:
 # Group Haltes
 Ophalen van haltes data
 
-## In de buurt [/haltes/indebuurt/{x_coordinaat}/{y_coordinaat}/{radius}]
+## In de buurt [/rise-api-core/haltes/indebuurt/{x_coordinaat}/{y_coordinaat}/{radius}]
 
 ### GET
 + Parameters
@@ -76,7 +77,7 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Informatie [/haltes/titel/{halte_id}]
+## Informatie [/rise-api-core/haltes/titel/{halte_id}]
 
 ### GET
 + Parameters
@@ -84,7 +85,7 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Vertrekken [/haltes/vertrekken/{halte_id}/{num_results}]
+## Vertrekken [/rise-api-core/haltes/vertrekken/{halte_id}/{num_results}]
 
 ### GET
 + Parameters
