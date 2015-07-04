@@ -94,9 +94,17 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
+## Doorkomende lijnen [/rise-api-core/haltes/doorkomendelijnen/{halte_id}]
+
+### GET
++ Parameters
+    + halte_id (required, number, `200144`) ... Halte ID
+
++ Response 200 (application/json)
+
 # Group Lijnen
 
-## Lijn informatie [/lijnen/titel/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}]
+## Lijn informatie [/rise-api-core/lijnen/titel/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}]
 
 ### GET
 + Parameters
@@ -106,7 +114,7 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Per gemeente [/lijnen/gemeente/{gemeente_id}]
+## Per gemeente [/rise-api-core/lijnen/gemeente/{gemeente_id}]
 
 ### GET
 + Parameters
@@ -114,38 +122,38 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Doorkomsten op dit moment [/dienstregeling/halteVolgorde/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{date}/{language}]
+## Halteregeling [/rise-api-core/dienstregeling/halteVolgorde/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{language}]
 
 ### GET
 + Parameters
     + entiteit_nummer   (required, number, `2`)
-    + lijnnummer_intern (required, number, `10`)
+    + lijnnummer_intern (required, number, `292`)
     + richtingcode      (required, number, `7`)
-    + date              (required, string, `11-05-2015`)
     + language          (required, string, `nl`)
 
 + Response 200 (application/json)
 
-## Dienstregeling [/dienstregeling/dienstregeling/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{date}/false/{language}]
+## Dienstregeling [/rise-api-core/dienstregeling/dienstregeling/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{date}/{alle_haltes}/{language}]
 
 ### GET
 + Parameters
     + entiteit_nummer   (required, number, `2`)
     + lijnnummer_intern (required, number, `10`)
     + richtingcode      (required, number, `7`)
-    + date              (required, string, `11-05-2015`)
+    + date              (required, string, `04-07-2015`)
+    + alle_haltes        (required, boolean, `true`)
     + language          (required, string, `nl`)
 
 + Response 200 (application/json)
 
-## Omleidingen [/reizigersberichten/omleidingen/lijn/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{date}/{language}]
+## Omleidingen [/rise-api-core/reizigersberichten/omleidingen/lijn/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{date}/{language}]
 
 ### GET
 + Parameters
     + entiteit_nummer   (required, number, `2`)
     + lijnnummer_intern (required, number, `10`)
     + richtingcode      (required, number, `7`)
-    + date              (required, string, `11-05-2015`)
+    + date              (required, string, `04-07-2015`)
     + language          (required, string, `nl`)
 
 + Response 200 (application/json)
