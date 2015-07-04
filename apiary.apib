@@ -114,14 +114,6 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-## Per gemeente [/rise-api-core/lijnen/gemeente/{gemeente_id}]
-
-### GET
-+ Parameters
-    + gemeente_id (required, number, `1990`)
-
-+ Response 200 (application/json)
-
 ## Halteregeling [/rise-api-core/dienstregeling/halteVolgorde/{entiteit_nummer}/{lijnnummer_intern}/{richtingcode}/{language}]
 
 ### GET
@@ -141,7 +133,7 @@ Ophalen van haltes data
     + lijnnummer_intern (required, number, `10`)
     + richtingcode      (required, number, `7`)
     + date              (required, string, `04-07-2015`)
-    + alle_haltes        (required, boolean, `true`) ... Zet op `false` om enkel hoofdhaltes te tonen
+    + alle_haltes       (required, boolean, `true`) ... Zet op `false` om enkel hoofdhaltes te tonen
     + language          (required, string, `nl`)
 
 + Response 200 (application/json)
@@ -160,7 +152,7 @@ Ophalen van haltes data
 
 # Group Gemeenten
 
-## Gemeente Nieuws [/search/gemeenteNieuws/{gemeente_id}/{page}/{num_results}]
+## Gemeente Nieuws [/rise-api-search/search/gemeenteNieuws/{gemeente_id}/{page}/{num_results}]
 
 ### GET
 + Parameters
@@ -170,13 +162,29 @@ Ophalen van haltes data
 
 + Response 200 (application/json)
 
-# Group Locaties
-
-## Verkooppunten [/locations/verkooppunten/{gemeente}]
+## Lijnen [/rise-api-core/lijnen/gemeente/{gemeente_id}]
 
 ### GET
 + Parameters
-    + gemeente (required, string, `Temse`) ... Gemeente naam
+    + gemeente_id (required, number, `342`)
+
++ Response 200 (application/json)
+
+# Group Locaties
+
+## Verkoop gemeente zoeken [/rise-api-core/locations/verkoopGemeentes/{query}]
+
+### GET
++ Parameters
+    + query (required, string, `Gent`) ... Gemeente naam
+
++ Response 200 (application/json)
+
+## Verkooppunten [/rise-api-core/locations/verkooppunten/{gemeente}]
+
+### GET
++ Parameters
+    + gemeente (required, string, `Gent`) ... Gemeente naam
 
 + Response 200 (application/json)
 
